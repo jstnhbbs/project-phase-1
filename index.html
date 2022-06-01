@@ -26,6 +26,7 @@
         <div id="filter-form">
             <form id="search-wine-form" >
                 <div>
+                    <h2>Find a Wine for Tonight!</h2>
                     <label for="wine-type">Wine Type:</label>
                     <select name="types" class="wine-types">
                         <option value="red">Red</option>
@@ -36,15 +37,20 @@
                         <option value="port">Port</option>
                     </select>
                 </div>
+                <br>
                 <div>
-                    <label for="search location"></label>
-                    <input type="text" id="search location">
+                    <label for="search location">Search by Location (case sensitive!)</label><br>
+                    <input type="text" id="search location"><br><br>
                     <input type="submit" value="search wines">
                 </div>
             </form>
-
+        
         </div>
-        <br>
+        <div id="search-results">
+            <h4>Search results:</h4>
+            <div id="scrolling-results-box"></div>
+            <br>
+        </div>
         <div id="new-wine-form-wrapper">
             <form id="new-wine-form">
                 <div>
