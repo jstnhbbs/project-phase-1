@@ -1,63 +1,22 @@
-// fetch all data
-function getRedWines() {
-    fetch("https://api.sampleapis.com/wines/reds")
-    .then(res => res.json())
-    .then(data => data.forEach(renderOneWine))
-}
-
-// lists all red wine
 const redWineButton = document.querySelector("#red-wine-btn")
-redWineButton.addEventListener("click", () => getRedWines())
+const whiteWineButton = document.getElementById("white-wine-btn")
+const sparklingWineButton = document.getElementById("sparkling-wine-btn")
+const roseWineButton = document.getElementById("rose-wine-btn")
+const portWineButton = document.getElementById("port-wine-btn")
 
-function getWhiteWines() {
-    fetch("https://api.sampleapis.com/wines/whites")
+redWineButton.addEventListener("click", () => getWines("reds"));
+whiteWineButton.addEventListener("click", () => getWines("whites"));
+sparklingWineButton.addEventListener("click", () => getWines("sparkling"));
+roseWineButton.addEventListener("click", () => getWines("rose"));
+portWineButton.addEventListener("click", () => getWines("port"));
+
+function getWines(wineType) {
+    console.log(wineType, "here")
+    document.querySelector("#scrolling-results-box").innerHTML = ""
+    fetch(`https://api.sampleapis.com/wines/${wineType}`)
     .then(res => res.json())
     .then(data => data.forEach(renderOneWine))
 }
-
-// list all white wine
-// getWhiteWines();
-
-function getSparklingWines() {
-    fetch("https://api.sampleapis.com/wines/sparkling")
-    .then(res => res.json())
-    .then(data => data.forEach(renderOneWine))
-}
-
-// getSparklingWines();
-
-function getRoseWines() {
-    fetch("https://api.sampleapis.com/wines/rose")
-    .then(res => res.json())
-    .then(data => data.forEach(renderOneWine))
-}
-
-// getRoseWines();
-
-function getDessertWines() {
-    fetch("https://api.sampleapis.com/wines/dessert")
-    .then(res => res.json())
-    .then(data => data.forEach(renderOneWine))
-}
-
-// getDessertWines();
-
-function getPortWines() {
-    fetch("https://api.sampleapis.com/wines/port")
-    .then(res => res.json())
-    .then(data => data.forEach(renderOneWine))
-}
-
-// getPortWines();
-
-// test wine rendering
-// function getOnePort() {
-//     fetch("https://api.sampleapis.com/wines/port/1")
-//     .then(res => res.json())
-//     .then(wine => renderOneWine(wine))
-// }
-
-// getOnePort()
 
 //lists the wine (name and rating Only)
 function renderWineName(wine) {
@@ -65,6 +24,7 @@ function renderWineName(wine) {
    const wineCard = document.createElement('div')
    const wineName = document.createElement('h5')
    const rating = document.createElement('h6')
+
 
    wineName.textContent = wine.wine
    rating.textContent = wine.rating.average
@@ -85,6 +45,8 @@ function renderOneWine(wine) {
    const image = document.createElement('img')
    const favoriteButton = document.createElement("button")
    const deleteButton = document.createElement("button")
+   
+   
 
    image.className = "wine-image"
    wineCard.className = "wine-card"
