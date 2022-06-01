@@ -1,4 +1,6 @@
-
+#title {
+    text-align: center;
+}
 
 .search-fields {
     display: flex;
