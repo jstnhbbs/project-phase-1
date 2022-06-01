@@ -41,8 +41,8 @@
 }
 
 .column img {
-    width: 180px;
-    height: 100px;
+    width: 98%;
+    height: 200px;
 }
 
 .column {
@@ -55,4 +55,28 @@
     justify-content: space-between;
     align-items: center;
     width: 98%;
+}
+
+.wine-image {
+    width: 100px;
+    height: 300px;
+    object-fit: cover;
+}
+
+#favorites-list {
+    overflow: auto;
+    white-space: nowrap;
+}
+
+#scrolling-results-box {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap; 
+}
+
+#scrolling-results-box .wineCard {
+    display: inline-block;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
 }
