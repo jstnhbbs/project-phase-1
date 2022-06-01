@@ -92,6 +92,7 @@ function renderOneWine(wine) {
     deleteButton.textContent = " Unlike "
     favoriteButton.textContent = "Like" 
     wineName.textContent = wine.wine
+    wineName.setAttribute("class", "wineNameTrun")
     winery.textContent = wine.winery
     rating.textContent = wine.rating.average
     image.src = wine.image

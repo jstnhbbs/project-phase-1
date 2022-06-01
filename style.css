@@ -64,14 +64,24 @@
 }
 
 #favorites-list {
-    overflow: auto;
-    white-space: nowrap;
+    display: flex;
+    overflow-y: scroll;
+    flex-wrap: wrap;
+    height: 400px;
+}
+
+#favorites-list .wineCard {
+    display: inline-block;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
 }
 
 #scrolling-results-box {
-    overflow-x: scroll;
-    overflow-y: hidden;
-    white-space: nowrap; 
+    display: flex;
+    overflow-y: scroll;
+    flex-wrap: wrap;
+    height: 400px;
 }
 
 #scrolling-results-box .wineCard {
@@ -79,4 +89,12 @@
     text-align: center;
     padding: 14px;
     text-decoration: none;
+}
+
+.wineNameTrun {
+    text-overflow: ellipsis;
+}
+
+.wine-card {
+    width: 25%;
 }
