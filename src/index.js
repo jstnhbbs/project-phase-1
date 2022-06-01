@@ -2,59 +2,62 @@
 function getRedWines() {
     fetch("https://api.sampleapis.com/wines/reds")
     .then(res => res.json())
-    .then(data => console.log(data))
+    .then(data => data.forEach(renderOneWine))
 }
 
-getRedWines();
+// lists all red wine
+const redWineButton = document.querySelector("#red-wine-btn")
+redWineButton.addEventListener("click", () => getRedWines())
 
 function getWhiteWines() {
     fetch("https://api.sampleapis.com/wines/whites")
     .then(res => res.json())
-    .then(data => console.log(data))
+    .then(data => data.forEach(renderOneWine))
 }
 
-getWhiteWines();
+// list all white wine
+// getWhiteWines();
 
 function getSparklingWines() {
     fetch("https://api.sampleapis.com/wines/sparkling")
     .then(res => res.json())
-    .then(data => console.log(data))
+    .then(data => data.forEach(renderOneWine))
 }
 
-getSparklingWines();
+// getSparklingWines();
 
 function getRoseWines() {
     fetch("https://api.sampleapis.com/wines/rose")
     .then(res => res.json())
-    .then(data => console.log(data))
+    .then(data => data.forEach(renderOneWine))
 }
 
-getRoseWines();
+// getRoseWines();
 
 function getDessertWines() {
     fetch("https://api.sampleapis.com/wines/dessert")
     .then(res => res.json())
-    .then(data => console.log(data))
+    .then(data => data.forEach(renderOneWine))
 }
 
-getDessertWines();
+// getDessertWines();
 
 function getPortWines() {
     fetch("https://api.sampleapis.com/wines/port")
     .then(res => res.json())
-    .then(data => console.log(data))
+    .then(data => data.forEach(renderOneWine))
 }
 
-getPortWines();
+// getPortWines();
 
 // test wine rendering
-function getOnePort() {
-    fetch("https://api.sampleapis.com/wines/port/1")
-    .then(res => res.json())
-    .then(wine => renderOneWine(wine))
-}
+// function getOnePort() {
+//     fetch("https://api.sampleapis.com/wines/port/1")
+//     .then(res => res.json())
+//     .then(wine => renderOneWine(wine))
+// }
 
-getOnePort()
+// getOnePort()
 
 //lists the wine (name and rating Only)
 function renderWineName(wine) {
@@ -82,6 +85,9 @@ function renderOneWine(wine) {
    const image = document.createElement('img')
    const favoriteButton = document.createElement("button")
    const deleteButton = document.createElement("button")
+
+   image.className = "wine-image"
+   wineCard.className = "wine-card"
 
     deleteButton.textContent = " Unlike "
     favoriteButton.textContent = "Like" 
