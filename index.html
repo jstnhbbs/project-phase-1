@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="style.css">
+        <script defer src="src/index.js"></script>
+        <!-- <script src=""></script> -->
+        <title>Whine Nights with Wine</title>
+    </head>
+    <body>
+        <h1>Whine Nights with Wine</h1>
+        <main>
+            <button></button>
+        </main>
+        <div id="form-wrapper">
+            <form id="wine-form">
+                <div>
+                    <div>
+                        <label for="wine-type">Wine Type:</label>
+                        <select name="types" id="wine-types">
+                            <option value="red">Red</option>
+                            <option value="white">White</option>
+                            <option value="sparkling">Sparkling</option>
+                            <option value="rose">Rose</option>
+                            <option value="dessert">Dessert</option>
+                            <option value="port">Port</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="winery-name-label">Winery:</label><br>
+                        <input type="text" for="winery-name"><br>
+                    </div>
+                    <div>
+                        <label for="wine-name-label">Wine:</label><br>
+                        <input type="text" id="new-wine-name"><br>
+                    </div>
+                    <div>
+                        <label for="rating">Rating:</label><br>
+                        <input type="text" id="rating"><br>
+                    </div>
+                    <div>
+                        <label for="location" id="location-label">Location:</label><br>
+                        <input type="text" id="location"><br>
+                    </div>
+                    <div>
+                        <label for="image"></label>Image URL:<br>
+                        <input type="text" id="image-link"><br>
+                    </div>
+                    <div><br>
+                        <input type="submit" value="add wine"/>
+                    </div>
+                </div>
+            </form>
+        </div>
+        
+    </body>
+</html>
