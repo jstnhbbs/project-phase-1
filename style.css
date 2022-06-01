@@ -1,4 +1,6 @@
-
+#title {
+    text-align: center;
+}
 
 .search-fields {
     display: flex;
@@ -10,4 +12,47 @@
     border: 3px solid black;
     background-color: blue;
     font-size: 20px;
+}
+
+.img {
+    float: left;
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+}
+
+.column .btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #555;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.column .btn:hover {
+    background-color: black;
+}
+
+.column img {
+    width: 180px;
+    height: 100px;
+}
+
+.column {
+    position: relative;
+    width: 25%;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 98%;
 }

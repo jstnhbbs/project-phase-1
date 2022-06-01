@@ -8,21 +8,31 @@
         <title>Whine Nights with Wine</title>
     </head>
     <body>
-        <h1>Whine Nights with Wine</h1>
-        <main class="search-fields">
-            <div class="dropdown-menu">
-                <button class="dropdown-options">Wine Type
-                    <div class="dropdown-content">
-                        <a href="" class="dropdown-wine-type">Red</a>
-                        <a href="" class="dropdown-wine-type">White</a>
-                        <a href="" class="dropdown-wine-type">Sparkling</a>
-                        <a href="" class="dropdown-wine-type">Rose</a>
-                        <a href="" class="dropdown-wine-type">Dessert</a>
-                        <a href="" class="dropdown-wine-type">Port</a>
-                    </div>
-                </button>
+        <h1 id="title">Whine Nights with Wine</h1>
+        <h2 style="text-align:center">Wine types</h2>
+        <div class="container">
+            <div class="row">
+                <div class="column">
+                    <img class="img" src="./img/red wine.png" alt="red-wine">
+                    <button class="btn" type="button">Red</button>
+                </div>
+                <div class="column">
+                    <img class="img" src="./img/white wine.jpg" alt="white-wine">
+                    <button class="btn" type="button">Whites</button>
+                </div>
+                <div class="column">
+                    <img class="img" src="./img/sparkling.jpg" alt="sparkling-wine">
+                    <button class="btn" type="button">Sparkling</button>
+                </div>
+                <div class="column">
+                    <img class="img" src="./img/rose.jpg" alt="rose-wine">
+                    <button class="btn" type="button">Rose</button>
+                </div>
+                <div class="column">
+                    <img class="img" src="./img/port-wine.jpg" alt="port-wine">
+                    <button class="btn" type="button">Port</button>
+                </div>
             </div>
-        </main>
         <div id="filter-form">
             <form id="search-wine-form" >
                 <div>
@@ -57,6 +67,10 @@
         </div>
         <div id="new-wine-form-wrapper">
             <form id="new-wine-form">
+        </div>
+        <br>
+        <div id="form-wrapper">
+            <form id="wine-form">
                 <div>
                     <div>
                         <h3> Don't see your favorite wine? Add it here to our database!</h3>
