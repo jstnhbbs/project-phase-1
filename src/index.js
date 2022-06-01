@@ -83,7 +83,7 @@ function renderOneWine(wine) {
    const favoriteButton = document.createElement("button")
    const deleteButton = document.createElement("button")
 
-    deleteButton.textContent = " x "
+    deleteButton.textContent = " Unlike "
     favoriteButton.textContent = "Like" 
     wineName.textContent = wine.wine
     winery.textContent = wine.winery
@@ -98,6 +98,9 @@ function renderOneWine(wine) {
         const favoriteList = document.querySelector("#favorites-list");
 
         favoriteList.append(wineCard)
-        
+    })
+
+    deleteButton.addEventListener("click", () => {
+        resultsSection.append(wineCard)
     })
 }
