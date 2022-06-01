@@ -23,13 +23,36 @@
                 </button>
             </div>
         </main>
+        <div id="filter-form">
+            <form id="search-wine-form" >
+                <div>
+                    <label for="wine-type">Wine Type:</label>
+                    <select name="types" class="wine-types">
+                        <option value="red">Red</option>
+                        <option value="white">White</option>
+                        <option value="sparkling">Sparkling</option>
+                        <option value="rose">Rose</option>
+                        <option value="dessert">Dessert</option>
+                        <option value="port">Port</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="search location"></label>
+                    <input type="text" id="search location">
+                    <input type="submit" value="search wines">
+                </div>
+            </form>
+
+        </div>
         <br>
-        <div id="form-wrapper">
-            <form id="wine-form">
+        <div id="new-wine-form-wrapper">
+            <form id="new-wine-form">
                 <div>
                     <div>
+                        <h3> Don't see your favorite wine? Add it here to our database!</h3>
+                        <h6>We want you to be drunk and happy with your friends!</h6>
                         <label for="wine-type">Wine Type:</label>
-                        <select name="types" id="wine-types">
+                        <select name="types" class="wine-types">
                             <option value="red">Red</option>
                             <option value="white">White</option>
                             <option value="sparkling">Sparkling</option>
