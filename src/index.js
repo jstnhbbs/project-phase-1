@@ -11,7 +11,6 @@ roseWineButton.addEventListener("click", () => getWines("rose"));
 portWineButton.addEventListener("click", () => getWines("port"));
 
 function getWines(wineType) {
-    console.log(wineType, "here")
     document.querySelector("#scrolling-results-box").innerHTML = ""
     fetch(`https://api.sampleapis.com/wines/${wineType}`)
     .then(res => res.json())
@@ -82,5 +81,42 @@ let selectRose = document.querySelector("#select-rose");
 let selectDessert = document.querySelector("#select-dessert");
 let selectPort = document.querySelector("#select-port");
 
-//randomizer button
-let randomButton =
+//randomizer buttons
+let randomRed = document.querySelector("#randomize-red");
+let randomWhite = document.querySelector("#randomize-white");
+let randomSparkling = document.querySelector("#randomize-sparkling");
+let randomDessert = document.querySelector("#randomize-dessert");
+let randomPort = document.querySelector("#randomize-port");
+let randomRose = document.querySelector("#randomize-rose");
+
+
+randomRed.onclick = function() {
+    getWineNamesArray("reds");
+}
+
+randomWhite.onclick = function() {
+    getWineNamesArray("whites");
+}
+
+randomSparkling.onclick = function() {
+    getWineNamesArray("sparkling")
+}
+
+randomDessert.onclick = function() {
+    getWineNamesArray("dessert")
+}
+
+randomPort.onclick = function() {
+    getWineNamesArray("port")
+}
+
+randomRose.onclick = function() {
+    getWineNamesArray("rose")
+}
+
+function getWineNamesArray(wineType) {
+    fetch(`https://api.sampleapis.com/wines/${wineType}`)
+    .then(response => response.json())
+    .then(data => data[Math.floor(Math.random() * data.length)])
+    .then(wine => renderOneWine(wine))
+}
