@@ -74,12 +74,17 @@ function renderOneWine(wine) {
 }
 
 // filter by location
+let wineTypes = document.querySelector("#filter-types");
 let selectRed = document.querySelector("#select-red");
 let selectWhite = document.querySelector("#select-white");
 let selectSparkling = document.querySelector("#select-sparkling");
 let selectRose = document.querySelector("#select-rose");
 let selectDessert = document.querySelector("#select-dessert");
 let selectPort = document.querySelector("#select-port");
+
+wineTypes.addEventListener('change', function() {
+    console.log('You selected: ', this.value);
+  });
 
 //randomizer buttons
 let randomRed = document.querySelector("#randomize-red");
