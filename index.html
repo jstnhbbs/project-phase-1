@@ -45,7 +45,8 @@
                 <div>
                     <h2>Find a Wine for Tonight!</h2>
                     <label for="wine-type">Wine Type:</label>
-                    <select name="types" class="wine-types">
+                    <select name="types" class="wine-types" id="filterTypes">
+                        <option value="none" selected disabled hidden>select an option</option>
                         <option value="red" id="select-red">Red</option>
                         <option value="white" id="select-white">White</option>
                         <option value="sparkling" id="select-sparkling">Sparkling</option>
@@ -57,8 +58,8 @@
                 <br>
                 <div>
                     <label for="search location">Search by Location (case sensitive!)</label><br>
-                    <input type="text" id="search location"><br><br>
-                    <input type="submit" value="search wines">
+                    <input type="text" id="search-location" required><br><br>
+                    <input type="submit" value="search wines" id="submit-search-wines">
                 </div>
             </form>
         
@@ -78,6 +79,7 @@
         </div>
         <div id="search-results">
             <h2>Search results:</h2>
+            <button id="clearResults">Clear Results</button>
             <div id="scrolling-results-box"></div>
         </div>
         <div id="new-wine-form-wrapper">
