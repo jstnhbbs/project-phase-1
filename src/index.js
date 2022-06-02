@@ -120,3 +120,9 @@ function getWineNamesArray(wineType) {
     .then(data => data[Math.floor(Math.random() * data.length)])
     .then(wine => renderOneWine(wine))
 }
+
+// //dark mode
+function darkMode() {
+    var element = document.body;
+    element.classList.toggle("dark-mode");
+ }
