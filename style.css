@@ -58,22 +58,22 @@
 }
 
 .wine-image {
-    width: 100px;
-    height: 300px;
-    object-fit: cover;
+    width: 75px;
+    height: 200px;
+    object-fit: scale-down;
 }
 
 #favorites-list {
     display: flex;
     overflow-y: scroll;
     flex-wrap: wrap;
-    height: 400px;
+    height: 300px;
 }
 
 #favorites-list .wineCard {
     display: inline-block;
     text-align: center;
-    padding: 14px;
+    padding: 10px;
     text-decoration: none;
 }
 
@@ -81,13 +81,13 @@
     display: flex;
     overflow-y: scroll;
     flex-wrap: wrap;
-    height: 400px;
+    height: 300px;
 }
 
 #scrolling-results-box .wineCard {
     display: inline-block;
     text-align: center;
-    padding: 14px;
+    padding: 10px;
     text-decoration: none;
 }
 
@@ -97,4 +97,9 @@
 
 .wine-card {
     width: 25%;
+}
+
+.sparkles {
+    height: 25px;
+    width: 25px;
 }

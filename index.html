@@ -39,12 +39,12 @@
                     <h2>Find a Wine for Tonight!</h2>
                     <label for="wine-type">Wine Type:</label>
                     <select name="types" class="wine-types">
-                        <option value="red">Red</option>
-                        <option value="white">White</option>
-                        <option value="sparkling">Sparkling</option>
-                        <option value="rose">Rose</option>
-                        <option value="dessert">Dessert</option>
-                        <option value="port">Port</option>
+                        <option value="red" id="select-red">Red</option>
+                        <option value="white" id="select-white">White</option>
+                        <option value="sparkling" id="select-sparkling">Sparkling</option>
+                        <option value="rose" id="select-rose">Rose</option>
+                        <option value="dessert" id="select-dessert">Dessert</option>
+                        <option value="port" id="select-port">Port</option>
                     </select>
                 </div>
                 <br>
@@ -56,6 +56,15 @@
             </form>
         
         </div>
+        <div id="randomizer-container">
+            <h3>I'm feeling <img src="./img/sparkles.png" alt="sparkles emoji" class="sparkles"/>spontaneous ;) <img src="./img/sparkles.png" alt="sparkles emoji" class="sparkles"/></h3>
+            <button class= "random-button" id="randomize-white">White: surprise me!</button>
+            <button class= "random-button" id="randomize-red">Red: surprise me!</button>
+            <button class= "random-button" id="randomize-rose">Rose: surprise me!</button>
+            <button class= "random-button" id="randomize-sparkling">Sparkling: surprise me!</button>
+            <button class= "random-button" id="randomize-dessert">Dessert: surprise me!</button>
+            <button class= "random-button" id="randomize-port">Port: surprise me!</button>
+        </div>
         <div>
             <h2>Favorites List:</h2>
             <div id="favorites-list"></div>
@@ -63,7 +72,6 @@
         <div id="search-results">
             <h2>Search results:</h2>
             <div id="scrolling-results-box"></div>
-            <br>
         </div>
         <div id="new-wine-form-wrapper">
             <form id="new-wine-form">
@@ -87,11 +95,11 @@
                     </div>
                     <div>
                         <label for="winery-name-label">Winery:</label><br>
-                        <input type="text" for="winery-name"><br>
+                        <input type="text" for="winery-name" required><br>
                     </div>
                     <div>
                         <label for="wine-name-label">Wine:</label><br>
-                        <input type="text" id="new-wine-name"><br>
+                        <input type="text" id="new-wine-name" required><br>
                     </div>
                     <div>
                         <label for="rating">Rating:</label><br>
@@ -99,11 +107,11 @@
                     </div>
                     <div>
                         <label for="location" id="location-label">Location:</label><br>
-                        <input type="text" id="location"><br>
+                        <input type="text" id="location" required><br>
                     </div>
                     <div>
                         <label for="image"></label>Image URL:<br>
-                        <input type="text" id="image-link"><br>
+                        <input type="text" id="image-link" required><br>
                     </div>
                     <div><br>
                         <input type="submit" value="add wine"/>
