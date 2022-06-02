@@ -188,9 +188,17 @@ function getWineNamesArray(wineType) {
     .then(wine => renderOneWine(wine))
 }
 
+
 // clear results (out of search results and favorits)
 let clearResults = document.querySelector("#clearResults")
 clearResults.onclick = () => {
     let allResults = document.querySelectorAll(".wine-card")
     allResults.forEach(result => result.remove());
 }
+
+// //dark mode
+function darkMode() {
+    var element = document.body;
+    element.classList.toggle("dark-mode");
+ }
+
