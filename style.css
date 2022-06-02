@@ -116,8 +116,34 @@ body {
     color: white;
   }
 
- #dark-mode {
+#dark-mode {
       position: absolute;
       right: 10px;
       top: 50px;
+  }
+
+#search-menu{
+    display: flex;
+    justify-content: center;
+    }
+
+div label {
+    display:flex;
+    justify-content: center;
+}
+div h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+  }
+
+  .random-button {
+    /* display: flex;
+    justify-content: center; */
+    /* align-items: center; */
+    border: 3px solid gold;
+  }
+
+div form div {
+    margin: auto;
   }
