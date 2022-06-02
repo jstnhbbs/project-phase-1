@@ -6,6 +6,15 @@ body {
     background-position: center;
     color: purple;
 }
+.dark-mode {
+        background-image: url("./img/Pink\ and\ White\ Sparkling\ Glitter\ Background.jpeg");
+        background-color: rgba(22, 0, 31, 0.9);
+        background-blend-mode: soft-light;
+        /* overflow: hidden; */
+        height: 100%;
+        /* color: purple; */
+        color: Pink;
+}
 
 #epl {
     display: block;
@@ -137,7 +146,7 @@ body {
     width: 25px;
 }
 
-body {
+/* body {
     padding: 25px;
     background-color: white;
     color: purple;
@@ -147,7 +156,7 @@ body {
   .dark-mode {
     background-color: rgb(30, 30, 30);
     color: black;
-  }
+  } */
 
 #dark-mode {
       position: absolute;
