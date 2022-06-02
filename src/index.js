@@ -1,3 +1,10 @@
+// let selectRed = document.querySelector("#select-red");
+// let selectWhite = document.querySelector("#select-white");
+// let selectSparkling = document.querySelector("#select-sparkling");
+// let selectRose = document.querySelector("#select-rose");
+// let selectDessert = document.querySelector("#select-dessert");
+// let selectPort = document.querySelector("#select-port");
+// lists all wine types of a certain color
 const redWineButton = document.querySelector("#red-wine-btn")
 const whiteWineButton = document.getElementById("white-wine-btn")
 const sparklingWineButton = document.getElementById("sparkling-wine-btn")
@@ -10,6 +17,7 @@ sparklingWineButton.addEventListener("click", () => getWines("sparkling"));
 roseWineButton.addEventListener("click", () => getWines("rose"));
 portWineButton.addEventListener("click", () => getWines("port"));
 
+// render wines and fetch
 function getWines(wineType) {
     document.querySelector("#scrolling-results-box").innerHTML = ""
     fetch(`https://api.sampleapis.com/wines/${wineType}`)
@@ -45,8 +53,6 @@ function renderOneWine(wine) {
    const favoriteButton = document.createElement("button")
    const deleteButton = document.createElement("button")
    
-   
-
    image.className = "wine-image"
    wineCard.className = "wine-card"
 
@@ -74,17 +80,37 @@ function renderOneWine(wine) {
 }
 
 // filter by location
-let wineTypes = document.querySelector("#filter-types");
-let selectRed = document.querySelector("#select-red");
-let selectWhite = document.querySelector("#select-white");
-let selectSparkling = document.querySelector("#select-sparkling");
-let selectRose = document.querySelector("#select-rose");
-let selectDessert = document.querySelector("#select-dessert");
-let selectPort = document.querySelector("#select-port");
-
+let wineTypes = document.querySelector("#filterTypes");
+let results;
 wineTypes.addEventListener('change', function() {
     console.log('You selected: ', this.value);
+    results = this.value;
+    return this.value;
   });
+let locationValue;
+let filterFormSubmit = document.querySelector("#filter-form");
+filterFormSubmit.addEventListener("submit", (e)=> {
+    e.preventDefault();
+    console.log(e);
+    console.log(e.target[0]);
+    locationValue = e.target["search-location"].value;
+    let wineType = results;
+    let newArray = []
+    if (results === "red") {
+        console.log("hello");
+        fetch(`https://api.sampleapis.com/wines/${results}`)
+        .then(res => res.json())
+        .then(data => data.forEach((wine)=> {
+            let location = wine.location;
+            if (location.includes(`${locationValue}`)) {
+                console.log("if 1")
+                newArray.push(wine)
+                return newArray
+            }
+        }))
+    }
+});
+
 
 //randomizer buttons
 let randomRed = document.querySelector("#randomize-red");
