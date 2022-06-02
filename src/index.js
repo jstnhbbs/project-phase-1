@@ -4,6 +4,7 @@
 // let selectRose = document.querySelector("#select-rose");
 // let selectDessert = document.querySelector("#select-dessert");
 // let selectPort = document.querySelector("#select-port");
+
 // lists all wine types of a certain color
 const redWineButton = document.querySelector("#red-wine-btn")
 const whiteWineButton = document.getElementById("white-wine-btn")
@@ -132,7 +133,7 @@ filterFormSubmit.addEventListener("submit", (e)=> {
     }
     console.log(newArray)
     // newArray.forEach(wine => renderOneWine(wine))
-    //THIS IS WHERE I AM TRIPPING UP
+    //THIS IS WHERE I AM TRIPPING UP. JK can't have this here.
     
 });
 
