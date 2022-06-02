@@ -51,7 +51,7 @@ function renderOneWine(wine) {
    image.className = "wine-image"
    wineCard.className = "wine-card"
 
-    deleteButton.textContent = " Unlike "
+    deleteButton.textContent = "Unlike"
     favoriteButton.textContent = "Like" 
     wineName.textContent = wine.wine
     wineName.setAttribute("class", "wineNameTrun")
@@ -73,3 +73,14 @@ function renderOneWine(wine) {
         resultsSection.append(wineCard)
     })
 }
+
+// filter by location
+let selectRed = document.querySelector("#select-red");
+let selectWhite = document.querySelector("#select-white");
+let selectSparkling = document.querySelector("#select-sparkling");
+let selectRose = document.querySelector("#select-rose");
+let selectDessert = document.querySelector("#select-dessert");
+let selectPort = document.querySelector("#select-port");
+
+//randomizer button
+let randomButton =
