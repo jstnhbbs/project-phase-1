@@ -87,30 +87,55 @@ wineTypes.addEventListener('change', function() {
     results = this.value;
     return this.value;
   });
+
 let locationValue;
+let newArray = [];
 let filterFormSubmit = document.querySelector("#filter-form");
+
 filterFormSubmit.addEventListener("submit", (e)=> {
     e.preventDefault();
     console.log(e);
     console.log(e.target[0]);
     locationValue = e.target["search-location"].value;
     let wineType = results;
-    let newArray = []
+
     if (results === "red") {
         console.log("hello");
-        fetch(`https://api.sampleapis.com/wines/${results}`)
+        fetch(`https://api.sampleapis.com/wines/reds`)
         .then(res => res.json())
-        .then(data => data.forEach((wine)=> {
-            let location = wine.location;
-            if (location.includes(`${locationValue}`)) {
-                console.log("if 1")
-                newArray.push(wine)
-                return newArray
-            }
-        }))
+        .then(data => data.forEach(pushArray))
+    } else if (results === "white") {
+        fetch("https://api.sampleapis.com/wines/whites")
+        .then(res => res.json())
+        .then(data => data.forEach(pushArray))
+    } else if (results === "dessert") {
+        fetch("https://api.sampleapis.com/wines/dessert")
+        .then(res => res.json())
+        .then(data => data.forEach(pushArray))
+    } else if (results === "port") {
+        fetch("https://api.sampleapis.com/wines/port")
+        .then(res => res.json())
+        .then(data => data.forEach(pushArray))
+    } else if (results === "sparkling") {
+        fetch("https://api.sampleapis.com/wines/sparkling")
+        .then(res => res.json())
+        .then(data => data.forEach(pushArray))
+    } else if (results === "rose") {
+        fetch("https://api.sampleapis.com/wines/rose")
+        .then(res => res.json())
+        .then(data => data.forEach(pushArray))
     }
+    console.log(newArray)
+    return newArray.forEach(renderOneWine);
 });
-
+// adds results to new array
+function pushArray(wine) {
+    let location = wine.location;
+    if (location.includes(`${locationValue}`)) {
+        console.log("if 1")
+        newArray.push(wine)
+    }
+}
 
 //randomizer buttons
 let randomRed = document.querySelector("#randomize-red");
