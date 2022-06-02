@@ -43,6 +43,7 @@ function renderWineName(wine) {
 
 // renders one wine
 function renderOneWine(wine) {
+    //console.log("sex")
    const resultsSection = document.querySelector("#scrolling-results-box")
    const wineCard = document.createElement('div')
    const wineName = document.createElement('h5')
@@ -77,11 +78,14 @@ function renderOneWine(wine) {
     deleteButton.addEventListener("click", () => {
         resultsSection.append(wineCard)
     })
+    //console.log("poop")
 }
 
-// filter by location
+// global variables needed for the location filter to work
 let wineTypes = document.querySelector("#filterTypes");
 let results;
+
+// more variables needed (from the select/dropdown menu)
 wineTypes.addEventListener('change', function() {
     console.log('You selected: ', this.value);
     results = this.value;
@@ -92,6 +96,7 @@ let locationValue;
 let newArray = [];
 let filterFormSubmit = document.querySelector("#filter-form");
 
+// filter by location event listener (functionality)
 filterFormSubmit.addEventListener("submit", (e)=> {
     e.preventDefault();
     console.log(e);
@@ -126,15 +131,20 @@ filterFormSubmit.addEventListener("submit", (e)=> {
         .then(data => data.forEach(pushArray))
     }
     console.log(newArray)
-    return newArray.forEach(renderOneWine);
+    // newArray.forEach(wine => renderOneWine(wine))
+    //THIS IS WHERE I AM TRIPPING UP
+    
 });
-// adds results to new array
+
+// callback function used to add results to the new array
 function pushArray(wine) {
     let location = wine.location;
     if (location.includes(`${locationValue}`)) {
-        console.log("if 1")
+        console.log("if dfdsf")
         newArray.push(wine)
+        renderOneWine(wine);
     }
+    
 }
 
 //randomizer buttons
@@ -145,7 +155,7 @@ let randomDessert = document.querySelector("#randomize-dessert");
 let randomPort = document.querySelector("#randomize-port");
 let randomRose = document.querySelector("#randomize-rose");
 
-
+//adds functionality to randomizer buttons
 randomRed.onclick = function() {
     getWineNamesArray("reds");
 }
@@ -170,9 +180,17 @@ randomRose.onclick = function() {
     getWineNamesArray("rose")
 }
 
+// main callback function to randomizer buttons
 function getWineNamesArray(wineType) {
     fetch(`https://api.sampleapis.com/wines/${wineType}`)
     .then(response => response.json())
     .then(data => data[Math.floor(Math.random() * data.length)])
     .then(wine => renderOneWine(wine))
+}
+
+// clear results (out of search results and favorits)
+let clearResults = document.querySelector("#clearResults")
+clearResults.onclick = () => {
+    let allResults = document.querySelectorAll(".wine-card")
+    allResults.forEach(result => result.remove());
 }
