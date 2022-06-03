@@ -8,7 +8,7 @@ body {
 }
 .dark-mode {
         background-image: url("./img/Pink\ and\ White\ Sparkling\ Glitter\ Background.jpeg");
-        background-color: rgba(22, 0, 31, 0.9);
+        background-color: rgba(22, 0, 31, 1);
         background-blend-mode: soft-light;
         /* overflow: hidden; */
         height: 100%;
@@ -153,10 +153,10 @@ body {
       top: 50px;
   }
 
-#search-menu{
+/* #search-menu{
     display: flex;
     justify-content: center;
-    }
+    } */
 
 .filter-form-2 {
     width: 800px;
@@ -168,28 +168,13 @@ body {
     justify-content: center;
     }
 
-
-/* #search-wine-form {
-    display: flex;
-    justify-content: ;
-    font-size: 30px;
-} */
-
-
-
-
 /* spontaneous */
-.randomize-container h3 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-.randomize-container button{
-    display:flex;
-    flex-direction: column-reverse;
-    border: 3px solid gold;
+.randomize-container {
+    display: block;
+    text-align: center;
   }
 
-/* div form div {
-    margin: auto;
-  } */
+  #filter-form {
+    display: block;
+    text-align: center;
+}
