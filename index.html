@@ -42,12 +42,12 @@
                     <button class="btn"id="port-wine-btn" type="button">Port</button>
                 </div>
             </div>
-        <div id="filter-form">
+        <div id="filter-form" class="filter-form-2">
             <form id="search-wine-form" >
                 <div>
                     <h2 id="search-menu">Find a Wine for Tonight!</h2>
-                    <label for="wine-type">Wine Type:</label>
-                    <select name="types" class="wine-types" id="filterTypes">
+                    <label for="wine-type" class="wine-types">Wine Type:</label>
+                    <select name="types" id="filterTypes">
                         <option value="none" selected disabled hidden>select an option</option>
                         <option value="red" id="select-red">Red</option>
                         <option value="white" id="select-white">White</option>
@@ -59,15 +59,15 @@
                 </div>
                 <br>
                 <div>
-                    <label for="search location">Search by Location (case sensitive!)</label><br>
+                    <label for="search location" class="wine-types">Search by Location (case sensitive!)</label><br>
                     <input type="text" id="search-location" required><br><br>
                     <input type="submit" value="search wines" id="submit-search-wines">
                 </div>
             </form>
         
         </div>
-        <div id="randomizer-container">
-            <h3>I'm feeling <img src="./img/sparkles.png" alt="sparkles emoji" class="sparkles"/>spontaneous ;) <img src="./img/sparkles.png" alt="sparkles emoji" class="sparkles"/></h3>
+        <div id="randomizer-container" class="randomize-container">
+            <h3>I'm feeling <img src="./img/sparkles.png" alt="sparkles emoji" class="sparkles"/>spontaneous ;) <img src="./img/sparkles.png" alt="sparkles emoji" class="sparkles"/></h3>            
             <button class= "random-button" id="randomize-white">White: surprise me!</button>
             <button class= "random-button" id="randomize-red">Red: surprise me!</button>
             <button class= "random-button" id="randomize-rose">Rose: surprise me!</button>
