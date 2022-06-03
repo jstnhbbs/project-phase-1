@@ -146,17 +146,6 @@ body {
     width: 25px;
 }
 
-/* body {
-    padding: 25px;
-    background-color: white;
-    color: purple;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  }
-  
-  .dark-mode {
-    background-color: rgb(30, 30, 30);
-    color: black;
-  } */
 
 #dark-mode {
       position: absolute;
@@ -169,23 +158,38 @@ body {
     justify-content: center;
     }
 
-div label {
-    display:flex;
-    justify-content: center;
-}
-div h3 {
+.filter-form-2 {
+    width: 800px;
+    margin: auto;
+} 
+
+.wine-types {
     display: flex;
     justify-content: center;
-    align-items: center;  
-  }
+    }
 
-  .random-button {
-    /* display: flex;
-    justify-content: center; */
-    /* align-items: center; */
+
+/* #search-wine-form {
+    display: flex;
+    justify-content: ;
+    font-size: 30px;
+} */
+
+
+
+
+/* spontaneous */
+.randomize-container h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+.randomize-container button{
+    display:flex;
+    flex-direction: column-reverse;
     border: 3px solid gold;
   }
 
-div form div {
+/* div form div {
     margin: auto;
-  }
+  } */
