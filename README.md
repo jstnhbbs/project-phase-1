@@ -14,4 +14,8 @@ Note: code performs DOM manipulations in order to filter and store information c
 
 ## Background
 
-This was my first project I worked on at my time at Flatiron School. I assisted with custom CSS and was the team lead for writing the filter functionality.
+This was our first project  we worked on at Flatiron School.
+
+## Setup
+
+run `npm install` then `npm start`
